@@ -1,8 +1,9 @@
-<html>
+    <html lang="zh-tw">
     <head>
         <title>McDonald's Kuas</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"  >
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
         <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/include/ActionHandler.js"></script>
         <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/modules/order/order_show_order_list.js"></script>
@@ -10,6 +11,8 @@
         <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/modules/history/history_show_select_page.js"></script>
         <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/modules/opinion/opinion_show_insert_page.js"></script>
         <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/modules/logout/logout_do_logout_action.js"></script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script>
         $(document).ready(function()
         {
@@ -17,7 +20,7 @@
             {
                 (new order_show_order_list('order','show_order_list','content')).run();
             });
-            
+
             $("#promotion").click(function()
             {
                 (new promotion_show_promotion_page('promotion','show_promotion_page','content')).run();
@@ -26,22 +29,158 @@
             {
                 (new history_show_select_page('history','show_select_page','content')).run();
             });
-            
+
             $("#opinion").click(function()
             {
                 (new opinion_show_insert_page('opinion','show_insert_page','content')).run();
             });
-            
+
             $("#logout").click(function()
             {
                 (new logout_do_logout_action('logout','do_logout_action','content')).run();
             });
-            
+
         });
         </script>
     </head>
     <body>
-        <button id="order">線上點餐</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="promotion">最新活動</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="history">訂單紀錄</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="opinion">意見回饋</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="logout">會員登出</button><br>
+        <a href="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/userindex.html"><img src="http://fs.mis.kuas.edu.tw/~s1106137117/bootstrap/%e6%9c%aa%e5%91%bd%e5%90%8d.png" width="100%"></a><br>
+        
+        
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto container-fluid">
+                    <div class="container-fluid">
+                          <div class="row align-items-start">
+                            <div class="col">
+                            <li class="nav-item">
+                                  <a class="nav-link" href="#"><button type="button" class="btn btn-warning btn-lg" id="order">線上點餐</button></a>
+                            </li>
+                            </div>
+                            <div class="col">
+                            <li class="nav-item">
+                                  <a class="nav-link" href="#"><button type="button" class="btn btn-warning btn-lg" id="promotion">最新活動</button></a>
+                            </li>
+                            </div>
+                            <div class="col">
+                            <li class="nav-item">
+                                  <a class="nav-link" href="#"><button type="button" class="btn btn-warning btn-lg" id="history">訂單紀錄</button></a>
+                            </li>
+                            </div>
+                            <div class="col">
+                            <li class="nav-item">
+                                  <a class="nav-link" href="#"><button type="button" class="btn btn-warning btn-lg" id="opinion">意見回饋</button></a>
+                            </li>
+                            </div>
+                            <div class="col">
+                            <li class="nav-item">
+                                  <a class="nav-link" href="#"><button type="button" class="btn btn-warning btn-lg" id="logout">會員登出</button></a>
+                            </li>
+                            </div>
+                           </div>
+                    </div>
+                  </ul>
+
+            </div>
+          </nav>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="http://fs.mis.kuas.edu.tw/~s1106137117/bootstrap/%e6%9c%aa%e5%91%bd%e5%90%8d2.png" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="http://fs.mis.kuas.edu.tw/~s1106137117/bootstrap/%e6%9c%aa%e5%91%bd%e5%90%8d1.png" alt="Second slide">
+            </div>
+            
+          </div>
+        </div>
         <div id="content"></div>
+        <footer class="page-footer font-small blue pt-4">
+
+          <!-- Footer Links -->
+          <div class="container-fluid text-center text-md-left">
+        
+            <!-- Grid row -->
+            <div class="row">
+        
+              <!-- Grid column -->
+              <div class="col-md-6 mt-md-0 mt-3">
+        
+                <!-- Content -->
+                <h5 class="text-uppercase">聯絡我們</h5>
+                <p>外送電話：0931886604 <br>
+                地址：807高雄市三民區建工路415號 <br>
+
+                </p>
+        
+              </div>
+              <!-- Grid column -->
+        
+              <hr class="clearfix w-100 d-md-none pb-3">
+        
+              <!-- Grid column -->
+              <div class="col-md-3 mb-md-0 mb-3">
+        
+                <!-- Links -->
+                <h5 class="text-uppercase">了解更多</h5>
+        
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="https://www.facebook.com/mcdonalds.tw">麥當勞官方粉絲團</a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/channel/UChkGH0QNU9w56CEotkNjpiA">麥當勞官方頻道</a>
+                  </li>
+
+                </ul>
+        
+              </div>
+              <!-- Grid column -->
+        
+              <!-- Grid column -->
+              <div class="col-md-3 mb-md-0 mb-3">
+        
+                <!-- Links -->
+                <h5 class="text-uppercase">支援</h5>
+        
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="https://campaign.mcdonalds.com.tw/TNC/?staticLinkId=133&locale=zh">使用條款</a>
+                  </li>
+                  <li>
+                    <a href="https://www.mcdonalds.com.tw/tw/ch/privacy.html?staticLinkId=135&locale=zh">隱私權保護申明</a>
+                  </li>
+                  <li>
+                    <a href="https://campaign.mcdonalds.com.tw/FAQ/?staticLinkId=137&locale=zh">常見問題</a>
+                  </li>
+                  <li>
+                    <a href="https://www.mcdonalds.com.tw/tw/ch/meal_builder.html?staticLinkId=138&locale=zh">營養資訊</a>
+                  </li>
+                </ul>
+        
+              </div>
+              <!-- Grid column -->
+        
+            </div>
+            <!-- Grid row -->
+        
+          </div>
+          <!-- Footer Links -->
+        
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="http://fs.mis.kuas.edu.tw/~s1106137117/bootstrap/new%201.html"> McDonald's Kuas.com</a>
+          </div>
+          <!-- Copyright -->
+        
+        </footer>
+        <div id="content"></div>
+        
     </body>
 </html>

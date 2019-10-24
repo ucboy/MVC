@@ -12,7 +12,7 @@ class login_show_login_page extends ActionHandler
         
         var str=`
                  使用者帳號：<input type='text' id='username'><br>
-                 密碼：      <input type='password' id='pass'><br>
+                 密　　　碼：<input type='password' id='pass'><br>
                  <input type='button' id='submit' value='送出'>
                  <div id="show_area"></div>`;
         $('#'+this.position_id).html(str);
