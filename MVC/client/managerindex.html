@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>McDonald's Kuas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/include/ActionHandler.js"></script>
+        <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/modules/user_profile/user_profile_show_management_page.js"></script>
+        <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/modules/promotion/promotion_show_promotion_page.js"></script>
+        <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/modules/managerhistory/managerhistory_show_select_page.js"></script>
+        <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/modules/manageropinion/manageropinion_show_select_page.js"></script>
+        <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/modules/logout/logout_do_logout_action.js"></script>
+        <script>
+        $(document).ready(function()
+        {
+            $("#user_profile").click(function()
+            {
+                (new user_profile_show_management_page('user_profile','show_management_page','content')).run();
+            });
+            
+            $("#promotion").click(function()
+            {
+                (new promotion_show_promotion_page('promotion','show_promotion_page','content')).run();
+            });
+            $("#managerhistory").click(function()
+            {
+                (new managerhistory_show_select_page('managerhistory','show_select_page','content')).run();
+            });
+            
+            $("#manageropinion").click(function()
+            {
+                (new manageropinion_show_select_page('manageropinion','show_select_page','content')).run();
+            });
+            
+            $("#logout").click(function()
+            {
+                (new logout_do_logout_action('logout','do_logout_action','content')).run();
+            });
+            
+        });
+        </script>
+    </head>
+    <body>
+        <button id="user_profile">菜單更動</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="promotion">最新活動</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="managerhistory">訂單紀錄</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="manageropinion">意見回饋</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="logout">老闆登出</button><br>
+        <div id="content"></div>
+    </body>
+</html>

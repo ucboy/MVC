@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>McDonald's Kuas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/include/ActionHandler.js"></script>
+        <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/modules/meal/meal_do_select_action.js"></script>
+        <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/modules/promotion/promotion_show_promotion_page.js"></script>
+        <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/modules/login/login_show_login_page.js"></script>
+        <script src="http://fs.mis.kuas.edu.tw/~s1106137117/MVC/client/modules/signup/signup_show_insert_page.js"></script>
+        <script>
+        $(document).ready(function()
+        {
+            $("#meal").click(function()
+            {
+                (new meal_do_select_action('meal','do_select_action','content')).run();
+            });
+            
+            $("#promotion").click(function()
+            {
+                (new promotion_show_promotion_page('promotion','show_promotion_page','content')).run();
+            });
+            $("#login").click(function()
+            {
+                (new login_show_login_page('login','show_login_page','content')).run();
+            });
+            
+            $("#signup").click(function()
+            {
+                (new signup_show_insert_page('signup','show_insert_page','content')).run();
+            });
+            
+        });
+        </script>
+    </head>
+    <body>
+        <button id="meal">預覽菜單</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="promotion">最新活動</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="login">會員登入</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="signup">會員註冊</button><br>
+        <div id="content"></div>
+    </body>
+</html>
