@@ -9,7 +9,7 @@ class promotion_show_promotion_page extends ActionHandler
     
     showResult()
     {
-        var str=`滿500打9折喔`;
+        var str=`滿500打5折喔`;
         $('#'+this.position_id).html(str);
 
     }

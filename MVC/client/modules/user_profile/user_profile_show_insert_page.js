@@ -11,7 +11,7 @@ class user_profile_show_insert_page extends ActionHandler
     {
         var str=`
                  餐點名稱：<input typw='text' id='prodName'><br>
-                 價錢：<input type='text' id='price'><br>
+                 價　　錢：<input type='text' id='price'><br>
                  <input type='button' id='submit' value='送出'>`;
         $('#'+this.position_id).html(str);
         

@@ -24,7 +24,7 @@ class do_insert_action implements ActionListener
         $total=$price*$howmany;
         if($total>=500)
         {
-            $total=$total*0.9;
+            $total=$total*0.5;
         }
         $sql="INSERT INTO `order` (`username`,`id`,`prodName`,`price`,`howmany`,`total`) VALUES (?,?,?,?,?,?);";
         $stmt=$conn->prepare($sql);
